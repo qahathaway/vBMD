@@ -1,15 +1,15 @@
 # Jupyter Notebook code for semi-automated and automated vertebral bone mineral denisty assessement
 
 ## Steps
-A) Convert DICOM to PNG
-B) Select original, primary axial images
-C) Select T1-T10 PNGs in the axial (n=10 images per participant) and sagittal (n=2 images per participant)
-  C.2) Individual frames are required for axial, whereas an upper (i.e., T1-T5) and lower (T6-T10) sagittal image was acquired
-D) Manually trace the ROI for 600 patients (n=6,000 axial, n=1,200 sagittal)
-E) Internal validaiton (n=360) and independent, external validation (n=240) set using MASK R-CNN and Pixellib
-F) Infer based on the developed AI-model
-G) Calculate Dice Score and Intersection over union
-H) Use PyRadiomics to extract pixel level and shape information
+##### A) Convert DICOM to PNG
+##### B) Select original, primary axial images
+##### C) Select T1-T10 PNGs in the axial (n=10 images per participant) and sagittal (n=2 images per participant)
+#####   C.2) Individual frames are required for axial, whereas an upper (i.e., T1-T5) and lower (T6-T10) sagittal image was acquired
+##### D) Manually trace the ROI for 600 patients (n=6,000 axial, n=1,200 sagittal)
+##### E) Internal validaiton (n=360) and independent, external validation (n=240) set using MASK R-CNN and Pixellib
+##### F) Infer based on the developed AI-model
+##### G) Calculate Dice Score and Intersection over union
+##### H) Use PyRadiomics to extract pixel level and shape information
 
 ### Pixel Intensities used for Frame Selection in Sagittal
 ![alt text](https://github.com/qahathaway/vBMD/blob/main/Jupyter-Notebook/Threshold_Sagittal.png)
