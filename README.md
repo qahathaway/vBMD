@@ -12,6 +12,11 @@ The internal and external validation sets differed (P<0.001) according to race, 
 ### Conclusions:
 Our automated, multilevel algorithm can opportunistically determine the pattern of BMD and shape measurements in thoracic vertebrae from any conventional chest CT, revealing distinct distribution according to age, race, and gender.
 
+## Overview of Study Design and Algorithm Development
+![alt text](https://github.com/qahathaway/vBMD/blob/main/Overview.png)
+Figure: Methodological Overview. (A) Non-contrast chest CT DICOM images from 3,015 participants were collected. The primary axial images were selected and converted to PNG. Using the primary axial images, a 3D volume was constructed to extract sagittal images. (B) Using pixel thresholding, the frames in the axial and sagittal planes were recursively selected to correspond to the middle of the vertebral body. Manual traces for the internal (n=360) and external (n=240) validation sets were performed using LabelMe. A custom instance segmentation, ROI inference pipeline was developed using PixelLib and Mask R-CNN. (C) The study included 3,015 participants, 600 of which had manual measurements. The Dice and intersection over union (IoU) score were calculated for the 600 participants with manual measurements (n=360 internal validation, n=240 external validation). The number of manual measurements included 6,000 for axial and 1,200 for sagittal. The number of images that AI-based inference was applied to included 30,150 axial and 6,030 sagittal.
 
-## Manual (green) versus Infered (orange) traces
-![alt text](https://github.com/qahathaway/vBMD/blob/main/Inference_vBMD.jpg)
+
+## Example of AI-Driven ROI Inference for Axial and Sagittal
+![alt text](https://github.com/qahathaway/vBMD/blob/main/Inference.png)
+Figure: Example of Manual and Inferred Regions-of-Interest (ROIs) in the External Validation Set. (A) Representative axial frames from T1-T10 with the inferred ROIs (multicolored) superimposed over the manual traces (white). (B) Representative sagittal upper T1-T5 (left) and lower T6-T10 (right) with the inferred ROIs (multicolored) superimposed over the manual traces (white). (C) An example of a single vertebrae that has corresponding manual and AI-inferred ROIs.
