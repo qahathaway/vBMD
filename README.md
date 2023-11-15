@@ -1,8 +1,8 @@
 # Robust, Multilevel Algorithm for Thoracic Vertebra Bone Measurements in Conventional Chest CT: Gender and Ethnicity Analysis Using the Multi-Ethnic Study of Atherosclerosis
 
 ## Training weights and COCO weights
-**Please contact qahathaway if you need the training weights or the pre-trained COCO weights, as storage on GitHub is difficult to maintain**
-**Mask R-CNN pretrained COCO weigths link: https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5**
+##### Please contact qahathaway if you need the training weights or the pre-trained COCO weights, as storage on GitHub is difficult to maintain
+##### Mask R-CNN pretrained COCO weigths link: https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5
 
 ### Purpose:
 To develop and validate an automated, multilevel, multiplanar approach for thoracic vertebral bone measurements using conventional chest CT and investigate the pattern of measurements according to sex/gender and race/ethnicity using the Multi-Ethnic Study of Atherosclerosis (MESA) cohort.
