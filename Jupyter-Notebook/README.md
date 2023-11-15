@@ -9,5 +9,8 @@
 #### F) Infer based on the developed model
 #### G) Calculate Dice Score and Intersection over union
 
-### Pixel Intensities used for Frame Selection
-![alt text](https://github.com/qahathaway/vBMD/blob/main/Jupyter-Notebook/Pixel_Intensities_vBMD.jpg)
+### Pixel Intensities used for Frame Selection in Sagittal
+![alt text](https://github.com/qahathaway/vBMD/blob/main/Jupyter-Notebook/Threshold_Sagittal.png)
+
+### Pixel Intensities used for Frame Selection in Axial
+![alt text](https://github.com/qahathaway/vBMD/blob/main/Jupyter-Notebook/Threshold_Axial.png)
