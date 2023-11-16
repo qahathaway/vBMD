@@ -25,3 +25,5 @@ Figure: Methodological Overview. (A) Non-contrast chest CT DICOM images from 3,0
 ## Example of AI-Driven ROI Inference for Axial and Sagittal
 ![alt text](https://github.com/qahathaway/vBMD/blob/main/Inference.png)
 Figure: Example of Manual and Inferred Regions-of-Interest (ROIs) in the External Validation Set. (A) Representative axial frames from T1-T10 with the inferred ROIs (multicolored) superimposed over the manual traces (white). (B) Representative sagittal upper T1-T5 (left) and lower T6-T10 (right) with the inferred ROIs (multicolored) superimposed over the manual traces (white). (C) An example of a single vertebrae that has corresponding manual and AI-inferred ROIs.
+
+### Code is made freely available for academic research and teaching. The code within this repository cannot be freely used for commercial applications.
