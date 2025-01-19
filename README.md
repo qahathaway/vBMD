@@ -1,8 +1,12 @@
 # A Deep Learning Model for Three-Dimensional Determination of Whole Thoracic Vertebral Bone Mineral Density from Non-Contrast Chest CT: the Multi-Ethnic Study of Atherosclerosis
 
-## Training weights and COCO weights
-##### Please contact qahathaway if you need the training weights or the pre-trained COCO weights, as storage on GitHub is difficult to maintain
+## TotalSegmentator 2.0 for 3D Segmentation
+#### This code was adapted from https://github.com/wasserth/TotalSegmentator with modifcations as detailed within this repository.
+#### Please cite the manuscript by Wasserthal et al. at: https://pubs.rsna.org/doi/10.1148/ryai.230024 or https://pmc.ncbi.nlm.nih.gov/articles/PMC10546353/
 
+
+## Training weights and COCO weights for 2D Segmentation
+##### Please contact qahathaway if you need the training weights or the pre-trained COCO weights, as storage on GitHub is difficult to maintain
 ##### Mask R-CNN pretrained COCO weigths link: https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5
 
 
