@@ -33,13 +33,17 @@ A multilevel DL algorithm for measuring 3D whole thoracic vertebral BMD using co
 
 
 ## Overview of Study Design and 3D Algorithm Development
-![alt text](https://github.com/qahathaway/vBMD/blob/main/Overview.png)
-3D Segmentation Overview. (A) Non-contrast chest CT DICOM images from 2956 participants were collected. The primary axial images were selected and converted to a NIFTI volume for 3D segmentation using the TotalSegmentator algorithm. (B) Using the TotalSegmentator algorithm, 3D volumes of the T1-T10 vertebral bodies for each participant were collected. The extracted 3D volume of the vertebral body was further modified to remove cortical bone. (C) In 594 participants with manual segmentation (using LabelMe) of axial and sagittal frames, Dice score and Intersection over Union (IoU) were calculated for the 3D segmentation. The diagram, containing the grey circles, illustrates how overlapping manual and automated segmentation is used to generate the Dice and IoU scores. (D) An example of T7-T10 vertebral bodies illustrating a T8-T9 wedge grade 3 fracture. To the right is an AUC curve depicting the performance of clinical and deep learning-derived variables to predict incident vertebral fractures. Lines are colored by feature, displayed in the legend in the bottom right of the plot.
+![alt text](https://github.com/qahathaway/vBMD/blob/main/Overview.jpg)
+#### 3D Segmentation Overview.
+(A) Non-contrast chest CT DICOM images from 2956 participants were collected. The primary axial images were selected and converted to a NIFTI volume for 3D segmentation using the TotalSegmentator algorithm. (B) Using the TotalSegmentator algorithm, 3D volumes of the T1-T10 vertebral bodies for each participant were collected. The extracted 3D volume of the vertebral body was further modified to remove cortical bone. (C) In 594 participants with manual segmentation (using LabelMe) of axial and sagittal frames, Dice score and Intersection over Union (IoU) were calculated for the 3D segmentation. The diagram, containing the grey circles, illustrates how overlapping manual and automated segmentation is used to generate the Dice and IoU scores. (D) An example of T7-T10 vertebral bodies illustrating a T8-T9 wedge grade 3 fracture. To the right is an AUC curve depicting the performance of clinical and deep learning-derived variables to predict incident vertebral fractures. Lines are colored by feature, displayed in the legend in the bottom right of the plot.
 
 
 ## Example of AI-Driven ROI Inference for Axial and Sagittal
-![alt text](https://github.com/qahathaway/vBMD/blob/main/Inference.png)
-2D Axial and Sagittal Segmentation Overview. Representative non-contrast chest CT DICOM images for (A) axial and (B) sagittal segmentation illustrating manual labeling (white ROI) overlayed with inferred ROI (colored for contrast) using the 2D DL-derived algorithm. (C) A custom instance segmentation, ROI inference pipeline was developed using PixelLib and Mask R-CNN. Representative non-contrast chest CT images show T10 examined by each step of the 2D DL-derived algorithm. In the box, the ROI alignment and deep learning process are illustrated, which results in a final segmentation (far right), where the inferred ROI is displayed in purple.
+![alt text](https://github.com/qahathaway/vBMD/blob/main/Inference.jpg)
+#### 2D Axial and Sagittal Segmentation Overview.
+Representative non-contrast chest CT DICOM images for (A) axial and (B) sagittal segmentation illustrating manual labeling (white ROI) overlayed with inferred ROI (colored for contrast) using the 2D DL-derived algorithm. (C) A custom instance segmentation, ROI inference pipeline was developed using PixelLib and Mask R-CNN. Representative non-contrast chest CT images show T10 examined by each step of the 2D DL-derived algorithm. In the box, the ROI alignment and deep learning process are illustrated, which results in a final segmentation (far right), where the inferred ROI is displayed in purple.
+
+
 
 
 ### Code is made freely available for academic research and teaching. The code within this repository cannot be freely used for commercial applications.
