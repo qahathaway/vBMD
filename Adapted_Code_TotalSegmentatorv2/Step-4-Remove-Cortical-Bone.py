@@ -37,6 +37,7 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         if filenames[10:-7] == 'T1':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
+                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
                             T1 = cv2.add(scanArray2, scanArray3)
                             T1[T1 == 1] = 0
@@ -71,6 +72,7 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T2':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
+                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
                             T2 = cv2.add(scanArray2, scanArray3)
                             T2[T2 == 1] = 0
@@ -105,6 +107,7 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T3':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
+                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
                             T3 = cv2.add(scanArray2, scanArray3)
                             T3[T3 == 1] = 0
@@ -139,6 +142,7 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T4':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
+                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
                             T4 = cv2.add(scanArray2, scanArray3)
                             T4[T4 == 1] = 0
@@ -173,6 +177,7 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T5':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
+                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
                             T5 = cv2.add(scanArray2, scanArray3)
                             T5[T5 == 1] = 0
@@ -207,6 +212,7 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T6':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
+                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
                             T6 = cv2.add(scanArray2, scanArray3)
                             T6[T6 == 1] = 0
@@ -241,6 +247,7 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T7':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
+                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
                             T7 = cv2.add(scanArray2, scanArray3)
                             T7[T7 == 1] = 0
@@ -275,6 +282,7 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T8':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
+                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
                             T8 = cv2.add(scanArray2, scanArray3)
                             T8[T8 == 1] = 0
@@ -309,6 +317,7 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T9':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
+                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
                             T9 = cv2.add(scanArray2, scanArray3)
                             T9[T9 == 1] = 0
@@ -343,6 +352,7 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T10':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
+                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
                             T10 = cv2.add(scanArray2, scanArray3)
                             T10[T10 == 1] = 0
