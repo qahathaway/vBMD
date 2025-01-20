@@ -28,6 +28,9 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                     #Load the scan and extract data using nibabel 
                     scan = nib.load(scanFilePath)
                     scanArray = scan.get_fdata()
+                    scanArray[scanArray < 1] = 0
+                    scanArray[(scanArray >= 1) & (scanArray <= 700)] = 1
+                    scanArray[scanArray > 700] = 0
                     scan2 = nib.load(scanFilePath2)
                     scanArray2 = scan2.get_fdata()
                     scanArray2[scanArray2 >= 1] = 1
@@ -37,9 +40,11 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         if filenames[10:-7] == 'T1':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
-                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
-                            T1 = cv2.add(scanArray2, scanArray3)
+                            Trabecular = cv2.add(scanArray, scanArray3)
+                            Trabecular[Trabecular == 1] = 0
+                            Trabecular[Trabecular == 2] = 1
+                            T1 = cv2.add(scanArray2, Trabecular)
                             T1[T1 == 1] = 0
                             T1[T1 == 2] = 255
                             T1_img = nib.Nifti1Image(T1, scan2.affine)
@@ -72,9 +77,11 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T2':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
-                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
-                            T2 = cv2.add(scanArray2, scanArray3)
+                            Trabecular = cv2.add(scanArray, scanArray3)
+                            Trabecular[Trabecular == 1] = 0
+                            Trabecular[Trabecular == 2] = 1
+                            T2 = cv2.add(scanArray2, Trabecular)
                             T2[T2 == 1] = 0
                             T2[T2 == 2] = 255
                             T2_img = nib.Nifti1Image(T2, scan2.affine)
@@ -107,9 +114,11 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T3':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
-                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
-                            T3 = cv2.add(scanArray2, scanArray3)
+                            Trabecular = cv2.add(scanArray, scanArray3)
+                            Trabecular[Trabecular == 1] = 0
+                            Trabecular[Trabecular == 2] = 1
+                            T3 = cv2.add(scanArray2, Trabecular)
                             T3[T3 == 1] = 0
                             T3[T3 == 2] = 255
                             T3_img = nib.Nifti1Image(T3, scan2.affine)
@@ -144,7 +153,10 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                             scanArray3 = scan3.get_fdata()
                             scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
-                            T4 = cv2.add(scanArray2, scanArray3)
+                            Trabecular = cv2.add(scanArray, scanArray3)
+                            Trabecular[Trabecular == 1] = 0
+                            Trabecular[Trabecular == 2] = 1
+                            T4 = cv2.add(scanArray2, Trabecular)
                             T4[T4 == 1] = 0
                             T4[T4 == 2] = 255
                             T4_img = nib.Nifti1Image(T4, scan2.affine)
@@ -177,9 +189,11 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T5':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
-                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
-                            T5 = cv2.add(scanArray2, scanArray3)
+                            Trabecular = cv2.add(scanArray, scanArray3)
+                            Trabecular[Trabecular == 1] = 0
+                            Trabecular[Trabecular == 2] = 1
+                            T5 = cv2.add(scanArray2, Trabecular)
                             T5[T5 == 1] = 0
                             T5[T5 == 2] = 255
                             T5_img = nib.Nifti1Image(T5, scan2.affine)
@@ -212,9 +226,11 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T6':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
-                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
-                            T6 = cv2.add(scanArray2, scanArray3)
+                            Trabecular = cv2.add(scanArray, scanArray3)
+                            Trabecular[Trabecular == 1] = 0
+                            Trabecular[Trabecular == 2] = 1
+                            T6 = cv2.add(scanArray2, Trabecular)
                             T6[T6 == 1] = 0
                             T6[T6 == 2] = 255
                             T6_img = nib.Nifti1Image(T6, scan2.affine)
@@ -247,9 +263,11 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T7':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
-                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
-                            T7 = cv2.add(scanArray2, scanArray3)
+                            Trabecular = cv2.add(scanArray, scanArray3)
+                            Trabecular[Trabecular == 1] = 0
+                            Trabecular[Trabecular == 2] = 1
+                            T7 = cv2.add(scanArray2, Trabecular)
                             T7[T7 == 1] = 0
                             T7[T7 == 2] = 255
                             T7_img = nib.Nifti1Image(T7, scan2.affine)
@@ -282,9 +300,11 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T8':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
-                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
-                            T8 = cv2.add(scanArray2, scanArray3)
+                            Trabecular = cv2.add(scanArray, scanArray3)
+                            Trabecular[Trabecular == 1] = 0
+                            Trabecular[Trabecular == 2] = 1
+                            T8 = cv2.add(scanArray2, Trabecular)
                             T8[T8 == 1] = 0
                             T8[T8 == 2] = 255
                             T8_img = nib.Nifti1Image(T8, scan2.affine)
@@ -317,9 +337,11 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T9':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
-                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
-                            T9 = cv2.add(scanArray2, scanArray3)
+                            Trabecular = cv2.add(scanArray, scanArray3)
+                            Trabecular[Trabecular == 1] = 0
+                            Trabecular[Trabecular == 2] = 1
+                            T9 = cv2.add(scanArray2, Trabecular)
                             T9[T9 == 1] = 0
                             T9[T9 == 2] = 255
                             T9_img = nib.Nifti1Image(T9, scan2.affine)
@@ -352,9 +374,11 @@ for scanFilePath in sorted(glob.glob("/home/sdemehr1/data_sdemehr1/MESA_Exam6_NI
                         elif filenames[10:-7] == 'T10':
                             scan3 = nib.load(scanFilePath3)
                             scanArray3 = scan3.get_fdata()
-                            scanArray3[scanArray3 >= 700] = 0
                             scanArray3[scanArray3 >= 1] = 1
-                            T10 = cv2.add(scanArray2, scanArray3)
+                            Trabecular = cv2.add(scanArray, scanArray3)
+                            Trabecular[Trabecular == 1] = 0
+                            Trabecular[Trabecular == 2] = 1
+                            T10 = cv2.add(scanArray2, Trabecular)
                             T10[T10 == 1] = 0
                             T10[T10 == 2] = 255
                             T10_img = nib.Nifti1Image(T10, scan2.affine)
